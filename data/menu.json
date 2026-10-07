@@ -1,0 +1,115 @@
+{
+  "_note": "SAMPLE MENU drafted for design. Replace names, prices, combos and availability with the real menu. Dish photos: put files in assets/dishes/ and set \"image\": \"../assets/dishes/<file>.jpg\".",
+  "restaurant": {
+    "name": "Wok & Flame",
+    "hours": "12 pm – 11 pm",
+    "service": "Dine-in menu"
+  },
+  "categories": [
+    {
+      "id": "soups", "lead": "Steaming", "name": "Soups", "art": "soup",
+      "combo": { "name": "Soup & Starter", "includes": ["Any veg soup", "Crispy corn (half)"], "price": 249, "diet": "veg" }
+    },
+    {
+      "id": "starters", "lead": "Wok-tossed", "name": "Starters", "art": "wok",
+      "combo": { "name": "Starter Trio", "includes": ["Chilli paneer", "Crispy corn", "Veg spring rolls"], "price": 449, "diet": "veg" }
+    },
+    {
+      "id": "dimsum", "lead": "Bamboo", "name": "Dim Sum", "art": "dimsum",
+      "combo": { "name": "Steamer Basket", "includes": ["Veg momos (4)", "Chicken momos (4)", "Two dips"], "price": 329, "diet": "nonveg" }
+    },
+    {
+      "id": "noodles", "lead": "Hakka", "name": "Noodles", "art": "noodles",
+      "combo": { "name": "Noodle Bowl Meal", "includes": ["Any noodles", "Manchurian (half)", "Lime soda"], "price": 349, "diet": "veg" }
+    },
+    {
+      "id": "rice", "lead": "Wok-fried", "name": "Rice", "art": "rice",
+      "combo": { "name": "Rice & Gravy", "includes": ["Fried rice", "Chilli chicken gravy"], "price": 379, "diet": "nonveg" }
+    },
+    {
+      "id": "tandoor", "lead": "Smoky", "name": "Tandoor", "art": "skewer",
+      "combo": { "name": "Tandoor Platter", "includes": ["Paneer tikka", "Malai broccoli", "Mint chutney"], "price": 499, "diet": "veg" }
+    },
+    {
+      "id": "curries", "lead": "Slow-cooked", "name": "Curries", "art": "kadai",
+      "combo": { "name": "Curry Thali", "includes": ["Dal makhani", "Paneer butter masala", "2 butter naan", "Jeera rice"], "price": 429, "diet": "veg" }
+    },
+    {
+      "id": "biryani", "lead": "Sealed", "name": "Biryani", "art": "handi",
+      "combo": { "name": "Biryani Feast", "includes": ["Chicken dum biryani", "Raita", "Gulab jamun"], "price": 399, "diet": "nonveg" }
+    },
+    {
+      "id": "continental", "lead": "Continental", "name": "Mains", "art": "pasta",
+      "combo": { "name": "Pasta & Bread", "includes": ["Any pasta", "Garlic bread", "Iced tea"], "price": 459, "diet": "veg" }
+    },
+    {
+      "id": "desserts", "lead": "Sweet", "name": "Endings", "art": "sundae",
+      "combo": { "name": "Sweet Share", "includes": ["Sizzling brownie", "Gulab jamun (2)"], "price": 279, "diet": "egg" }
+    },
+    {
+      "id": "drinks", "lead": "Cool", "name": "Sips", "art": "glass",
+      "combo": { "name": "Table Pitcher", "includes": ["1 L fresh lime soda", "Four glasses"], "price": 249, "diet": "veg" }
+    }
+  ],
+  "dishes": [
+    { "id": "hot-sour-veg", "category": "soups", "name": "Hot & Sour Veg", "description": "Peppery, tangy broth thick with shredded vegetables and tofu.", "ingredients": "cabbage, carrot, tofu, mushroom, vinegar, white pepper, soy", "price": 169, "diet": "veg", "spice": 2, "portion": "Serves 1", "available": true, "image": null },
+    { "id": "manchow-chicken", "category": "soups", "name": "Chicken Manchow", "description": "Dark, garlicky soup topped with a fistful of crisp fried noodles.", "ingredients": "chicken, garlic, ginger, coriander, soy, fried noodles", "price": 199, "diet": "nonveg", "spice": 2, "portion": "Serves 1", "available": true, "image": null },
+    { "id": "sweet-corn", "category": "soups", "name": "Sweet Corn", "description": "Silky, mild corn soup. The one the kids always order.", "ingredients": "sweet corn, egg-free stock, spring onion, white pepper", "price": 159, "diet": "veg", "spice": 0, "portion": "Serves 1", "available": true, "image": null },
+    { "id": "tom-yum", "category": "soups", "name": "Tom Yum Prawn", "description": "Thai lemongrass broth, sour and bright, with plump prawns.", "ingredients": "prawn, lemongrass, galangal, kaffir lime, chilli, mushroom", "price": 239, "diet": "nonveg", "spice": 3, "portion": "Serves 1", "available": false, "image": null },
+
+    { "id": "chilli-paneer", "category": "starters", "name": "Chilli Paneer", "description": "Crisp paneer cubes tossed hot with peppers, onion and green chilli.", "ingredients": "paneer, capsicum, onion, green chilli, soy, garlic", "price": 279, "diet": "veg", "spice": 2, "portion": "8 pieces", "available": true, "image": null, "chefPick": true },
+    { "id": "dragon-chicken", "category": "starters", "name": "Dragon Chicken", "description": "Fiery strips of chicken in a sticky red chilli glaze, sesame on top.", "ingredients": "chicken, red chilli, cashew, honey, sesame, spring onion", "price": 329, "diet": "nonveg", "spice": 3, "portion": "Serves 2", "available": true, "image": null },
+    { "id": "crispy-corn", "category": "starters", "name": "Crispy Corn", "description": "Golden corn kernels fried crunchy with salt, pepper and curry leaf.", "ingredients": "sweet corn, curry leaf, pepper, onion, chilli flakes", "price": 229, "diet": "veg", "spice": 1, "portion": "Serves 2", "available": true, "image": null },
+    { "id": "spring-rolls", "category": "starters", "name": "Veg Spring Rolls", "description": "Shatter-crisp rolls of glass noodles and cabbage, sweet chilli dip.", "ingredients": "cabbage, carrot, glass noodles, sweet chilli sauce", "price": 219, "diet": "veg", "spice": 0, "portion": "6 pieces", "available": true, "image": null },
+    { "id": "chilli-fish", "category": "starters", "name": "Chilli Garlic Fish", "description": "Basa fillet bites, wok-seared with burnt garlic and bird's-eye chilli.", "ingredients": "basa, garlic, bird's-eye chilli, soy, spring onion", "price": 349, "diet": "nonveg", "spice": 2, "portion": "Serves 2", "available": true, "image": null },
+
+    { "id": "veg-momos", "category": "dimsum", "name": "Veg Momos", "description": "Thin-skinned dumplings of cabbage, carrot and ginger. Red chutney on the side.", "ingredients": "cabbage, carrot, onion, ginger, momo chutney", "price": 179, "diet": "veg", "spice": 1, "portion": "6 pieces", "available": true, "image": null },
+    { "id": "chicken-momos", "category": "dimsum", "name": "Chicken Momos", "description": "Juicy minced chicken, steamed until the pleats turn glossy.", "ingredients": "chicken, onion, coriander, ginger, momo chutney", "price": 219, "diet": "nonveg", "spice": 1, "portion": "6 pieces", "available": true, "image": null, "chefPick": true },
+    { "id": "pan-fried-momos", "category": "dimsum", "name": "Pan-fried Momos", "description": "Steamed, then crisped on one side in the pan. Best of both.", "ingredients": "veg or chicken filling, sesame oil, spring onion", "price": 239, "diet": "veg", "spice": 1, "portion": "6 pieces", "available": true, "image": null },
+    { "id": "tandoori-momos", "category": "dimsum", "name": "Tandoori Momos", "description": "Momos marinated in tikka spice and charred in the tandoor.", "ingredients": "chicken momos, hung curd, kashmiri chilli, mint chutney", "price": 259, "diet": "nonveg", "spice": 2, "portion": "6 pieces", "available": true, "image": null },
+
+    { "id": "veg-hakka", "category": "noodles", "name": "Veg Hakka Noodles", "description": "Street-style noodles, smoky from a screaming-hot wok.", "ingredients": "noodles, cabbage, capsicum, carrot, spring onion, soy", "price": 219, "diet": "veg", "spice": 1, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "chicken-hakka", "category": "noodles", "name": "Chicken Hakka Noodles", "description": "Our house noodles with shredded chicken and plenty of wok char.", "ingredients": "noodles, chicken, cabbage, capsicum, soy, white pepper", "price": 259, "diet": "nonveg", "spice": 1, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "schezwan-noodles", "category": "noodles", "name": "Schezwan Noodles", "description": "Tossed in our house Schezwan paste. Hot, garlicky, a little numbing.", "ingredients": "noodles, schezwan sauce, garlic, vegetables", "price": 239, "diet": "veg", "spice": 3, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "pad-thai", "category": "noodles", "name": "Pad Thai", "description": "Flat rice noodles, tamarind, crushed peanuts and a squeeze of lime.", "ingredients": "rice noodles, tamarind, peanuts, bean sprouts, tofu, lime", "price": 299, "diet": "veg", "spice": 1, "portion": "Serves 1", "available": true, "image": null, "chefPick": true },
+    { "id": "singapore-noodles", "category": "noodles", "name": "Singapore Noodles", "description": "Thin rice vermicelli with egg, curry powder and prawn.", "ingredients": "rice vermicelli, egg, prawn, curry powder, peppers", "price": 289, "diet": "nonveg", "spice": 1, "portion": "Serves 1", "available": false, "image": null },
+
+    { "id": "veg-fried-rice", "category": "rice", "name": "Veg Fried Rice", "description": "Day-old rice, fired fast with vegetables and a splash of soy.", "ingredients": "rice, beans, carrot, spring onion, soy", "price": 199, "diet": "veg", "spice": 0, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "egg-fried-rice", "category": "rice", "name": "Egg Fried Rice", "description": "Fluffy scrambled egg folded through smoky rice.", "ingredients": "rice, egg, spring onion, white pepper, soy", "price": 219, "diet": "egg", "spice": 0, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "burnt-garlic-rice", "category": "rice", "name": "Burnt Garlic Rice", "description": "Garlic toasted dark and nutty, then tossed with rice and greens.", "ingredients": "rice, garlic, spring onion, bok choy, chilli oil", "price": 229, "diet": "veg", "spice": 1, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "thai-basil-rice", "category": "rice", "name": "Thai Basil Chicken Rice", "description": "Minced chicken with holy basil and chilli over jasmine rice.", "ingredients": "jasmine rice, chicken, thai basil, bird's-eye chilli, fish sauce", "price": 289, "diet": "nonveg", "spice": 2, "portion": "Serves 1", "available": true, "image": null },
+
+    { "id": "paneer-tikka", "category": "tandoor", "name": "Paneer Tikka", "description": "Thick paneer in a mustard-chilli marinade, charred at the edges.", "ingredients": "paneer, hung curd, mustard oil, kashmiri chilli, onion, capsicum", "price": 299, "diet": "veg", "spice": 2, "portion": "8 pieces", "available": true, "image": null, "chefPick": true },
+    { "id": "chicken-tikka", "category": "tandoor", "name": "Chicken Tikka", "description": "Boneless chicken, overnight marinade, smoked over charcoal.", "ingredients": "chicken, hung curd, ginger-garlic, garam masala, lemon", "price": 349, "diet": "nonveg", "spice": 2, "portion": "8 pieces", "available": true, "image": null },
+    { "id": "malai-broccoli", "category": "tandoor", "name": "Malai Broccoli", "description": "Broccoli florets in a creamy cheese and cardamom coat.", "ingredients": "broccoli, cream, cheese, cardamom, white pepper", "price": 279, "diet": "veg", "spice": 0, "portion": "Serves 2", "available": true, "image": null },
+    { "id": "tandoori-chicken", "category": "tandoor", "name": "Tandoori Chicken", "description": "Bone-in, fiery red and smoky. Half or full bird.", "ingredients": "chicken, kashmiri chilli, curd, lemon, chaat masala", "price": 399, "diet": "nonveg", "spice": 2, "portion": "Half", "available": true, "image": null },
+
+    { "id": "dal-makhani", "category": "curries", "name": "Dal Makhani", "description": "Black lentils simmered overnight with butter and cream.", "ingredients": "black urad, rajma, butter, cream, tomato", "price": 249, "diet": "veg", "spice": 1, "portion": "Serves 2", "available": true, "image": null },
+    { "id": "paneer-butter-masala", "category": "curries", "name": "Paneer Butter Masala", "description": "Soft paneer in a sweet-tangy tomato and cashew gravy.", "ingredients": "paneer, tomato, cashew, butter, kasuri methi", "price": 289, "diet": "veg", "spice": 1, "portion": "Serves 2", "available": true, "image": null },
+    { "id": "butter-chicken", "category": "curries", "name": "Butter Chicken", "description": "Tandoor-charred chicken folded into velvety makhani gravy.", "ingredients": "chicken tikka, tomato, butter, cream, fenugreek", "price": 349, "diet": "nonveg", "spice": 1, "portion": "Serves 2", "available": true, "image": null, "chefPick": true },
+    { "id": "thai-green-curry", "category": "curries", "name": "Thai Green Curry", "description": "Coconut curry with green chilli paste, served with jasmine rice.", "ingredients": "coconut milk, green curry paste, vegetables, thai basil, jasmine rice", "price": 329, "diet": "veg", "spice": 2, "portion": "Serves 1", "available": true, "image": null },
+    { "id": "rogan-josh", "category": "curries", "name": "Mutton Rogan Josh", "description": "Kashmiri-style mutton, deep red and fragrant with fennel.", "ingredients": "mutton, kashmiri chilli, fennel, dry ginger, curd", "price": 429, "diet": "nonveg", "spice": 2, "portion": "Serves 2", "available": true, "image": null },
+    { "id": "butter-naan", "category": "curries", "name": "Butter Naan", "description": "Pillowy naan from the tandoor, brushed with butter.", "ingredients": "refined flour, curd, butter", "price": 59, "diet": "veg", "spice": 0, "portion": "1 piece", "available": true, "image": null },
+    { "id": "garlic-naan", "category": "curries", "name": "Garlic Naan", "description": "Naan studded with chopped garlic and coriander.", "ingredients": "refined flour, garlic, coriander, butter", "price": 79, "diet": "veg", "spice": 0, "portion": "1 piece", "available": true, "image": null },
+
+    { "id": "veg-biryani", "category": "biryani", "name": "Veg Dum Biryani", "description": "Layered basmati and spiced vegetables, sealed and slow-cooked.", "ingredients": "basmati, vegetables, saffron, fried onion, mint", "price": 279, "diet": "veg", "spice": 2, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "chicken-biryani", "category": "biryani", "name": "Chicken Dum Biryani", "description": "Our bestseller. Saffron rice over marinated chicken, opened at your table.", "ingredients": "basmati, chicken, saffron, fried onion, mint, ghee", "price": 329, "diet": "nonveg", "spice": 2, "portion": "Serves 1–2", "available": true, "image": null, "chefPick": true },
+    { "id": "mutton-biryani", "category": "biryani", "name": "Mutton Biryani", "description": "Tender mutton on the bone, cooked dum-style for hours.", "ingredients": "basmati, mutton, saffron, whole spices, ghee", "price": 399, "diet": "nonveg", "spice": 2, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "egg-biryani", "category": "biryani", "name": "Egg Biryani", "description": "Masala-roasted eggs buried in fragrant rice.", "ingredients": "basmati, egg, onion, biryani masala, mint", "price": 249, "diet": "egg", "spice": 2, "portion": "Serves 1", "available": true, "image": null },
+
+    { "id": "penne-arrabbiata", "category": "continental", "name": "Penne Arrabbiata", "description": "Penne in a garlicky tomato sauce with a chilli kick.", "ingredients": "penne, tomato, garlic, chilli flakes, basil, parmesan", "price": 299, "diet": "veg", "spice": 1, "portion": "Serves 1", "available": true, "image": null },
+    { "id": "alfredo-chicken", "category": "continental", "name": "Chicken Alfredo", "description": "Fettuccine in a rich parmesan cream sauce with grilled chicken.", "ingredients": "fettuccine, chicken, cream, parmesan, black pepper", "price": 369, "diet": "nonveg", "spice": 0, "portion": "Serves 1", "available": true, "image": null },
+    { "id": "grilled-chicken", "category": "continental", "name": "Herb Grilled Chicken", "description": "Chicken breast with mash, sautéed veg and pepper jus.", "ingredients": "chicken, potato, butter, seasonal vegetables, pepper sauce", "price": 429, "diet": "nonveg", "spice": 0, "portion": "Serves 1", "available": true, "image": null },
+    { "id": "garlic-bread", "category": "continental", "name": "Cheesy Garlic Bread", "description": "Baguette with garlic butter and melted mozzarella.", "ingredients": "baguette, garlic, butter, mozzarella, oregano", "price": 179, "diet": "veg", "spice": 0, "portion": "4 pieces", "available": true, "image": null },
+
+    { "id": "sizzling-brownie", "category": "desserts", "name": "Sizzling Brownie", "description": "Hot brownie on a sizzler plate, vanilla ice cream, chocolate sauce poured at the table.", "ingredients": "brownie, vanilla ice cream, chocolate sauce, walnuts", "price": 229, "diet": "egg", "spice": 0, "portion": "Serves 1–2", "available": true, "image": null, "chefPick": true },
+    { "id": "gulab-jamun", "category": "desserts", "name": "Gulab Jamun", "description": "Warm, syrup-soaked milk dumplings. Two to a bowl.", "ingredients": "khoya, sugar syrup, cardamom, rose water", "price": 119, "diet": "veg", "spice": 0, "portion": "2 pieces", "available": true, "image": null },
+    { "id": "date-pancake", "category": "desserts", "name": "Date Pancake", "description": "Crisp Chinese-style pancake rolled around date paste, with ice cream.", "ingredients": "flour, dates, sesame, vanilla ice cream", "price": 199, "diet": "veg", "spice": 0, "portion": "Serves 1–2", "available": true, "image": null },
+    { "id": "mango-sticky-rice", "category": "desserts", "name": "Mango Sticky Rice", "description": "Coconut sticky rice with ripe mango, when mangoes are in season.", "ingredients": "glutinous rice, coconut milk, mango, sesame", "price": 249, "diet": "veg", "spice": 0, "portion": "Serves 1", "available": false, "image": null },
+
+    { "id": "lime-soda", "category": "drinks", "name": "Fresh Lime Soda", "description": "Sweet, salted or both. Ask for it your way.", "ingredients": "lime, soda, sugar or salt", "price": 89, "diet": "veg", "spice": 0, "portion": "300 ml", "available": true, "image": null },
+    { "id": "masala-chaas", "category": "drinks", "name": "Masala Chaas", "description": "Spiced buttermilk with roasted cumin and mint.", "ingredients": "curd, cumin, mint, ginger, black salt", "price": 79, "diet": "veg", "spice": 0, "portion": "300 ml", "available": true, "image": null },
+    { "id": "lemon-iced-tea", "category": "drinks", "name": "Lemon Iced Tea", "description": "Brewed in house, not from a powder.", "ingredients": "black tea, lemon, sugar, mint", "price": 119, "diet": "veg", "spice": 0, "portion": "350 ml", "available": true, "image": null },
+    { "id": "virgin-mojito", "category": "drinks", "name": "Virgin Mojito", "description": "Muddled mint and lime, topped with soda and crushed ice.", "ingredients": "mint, lime, sugar, soda", "price": 149, "diet": "veg", "spice": 0, "portion": "350 ml", "available": true, "image": null }
+  ]
+}

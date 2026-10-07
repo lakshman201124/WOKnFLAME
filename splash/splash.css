@@ -1,0 +1,278 @@
+:root {
+  --cream: #F5EEDF;
+  --ink: #006A4E; /* bottle green */
+  --ink-soft: rgba(0, 106, 78, 0.1);
+  --sans: "Familjen Grotesk", system-ui, sans-serif;
+  --hand: "Gochi Hand", "Comic Sans MS", cursive;
+  --gutter: 24px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 100dvh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--cream);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.defs { position: absolute; }
+
+/* every illustration line */
+.ink {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+.ink .fill { fill: var(--ink); stroke: none; }
+
+.scene { position: absolute; inset: 0; }
+
+/* ───────── Scene 1 ───────── */
+.scene--loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: var(--gutter);
+}
+
+.brand-mark {
+  position: absolute;
+  top: max(32px, env(safe-area-inset-top));
+  inset-inline: 0;
+  text-align: center;
+  font-family: var(--hand);
+  font-size: 24px;
+}
+
+/* engraving bleeds edge to edge */
+.chef {
+  width: calc(100% + 2 * var(--gutter));
+  margin-inline: calc(-1 * var(--gutter));
+  overflow: visible;
+}
+.chef .art { fill: var(--ink); }
+
+/* hidden until the engraving has loaded and the timeline starts */
+.brand-mark, .loader__meta { visibility: hidden; }
+#flow {
+  fill: none;
+  stroke: var(--cream);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 3 12;
+  opacity: 0;
+}
+#ripples { stroke-width: 1.4; }
+#sizzle { fill: var(--ink); }
+#steam { stroke-width: 2.2; }
+#steam .halo { stroke: var(--cream); stroke-width: 8; }
+
+.percent {
+  font-family: var(--hand);
+  font-size: 42px;
+  line-height: 1;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.caption {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* ───────── Scene 2 ───────── */
+.scene--welcome {
+  visibility: hidden;
+  padding: max(64px, calc(env(safe-area-inset-top) + 40px)) var(--gutter) 0;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: clamp(36px, 11vw, 46px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+.hl { display: block; }
+.hl--indent { padding-left: 14%; }
+.hl--script {
+  font-family: var(--hand);
+  font-weight: 400;
+  font-size: 1.32em;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-align: right;
+}
+.write {
+  display: inline-block;
+  clip-path: inset(-20% 0% -20% -5%);
+}
+
+.tagline {
+  margin-top: 8px;
+  text-align: right;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.info {
+  position: absolute;
+  left: var(--gutter);
+  top: 36%;
+}
+.hours {
+  font-family: var(--hand);
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.cuisines {
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.glass {
+  position: absolute;
+  right: 0;
+  bottom: calc(max(28px, env(safe-area-inset-bottom) + 16px) + 72px);
+  width: min(66%, 290px);
+}
+
+.glass {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+.glass:focus-visible { outline: 2px dashed var(--ink); outline-offset: -24px; border-radius: 24px; }
+.tea { fill: var(--ink); stroke: none; opacity: 0.14; }
+
+/* "give it a tap!" note, written next to the mug */
+.mug-hint {
+  position: absolute;
+  right: min(54%, 236px);
+  bottom: calc(max(28px, env(safe-area-inset-bottom) + 16px) + 250px);
+  font-family: var(--hand);
+  font-size: 19px;
+  transform: rotate(-6deg);
+  pointer-events: none;
+  visibility: hidden;
+}
+.mug-hint svg {
+  display: block;
+  width: 44px;
+  margin: 2px 0 0 auto;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* CTA */
+.cta {
+  position: absolute;
+  left: var(--gutter);
+  bottom: max(28px, calc(env(safe-area-inset-bottom) + 16px));
+  width: 220px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 6px;
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  isolation: isolate;
+  background: var(--cream);
+}
+.cta__fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+.cta__ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+.cta__icon {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--ink);
+  display: grid;
+  place-items: center;
+  transition: background-color 0.45s;
+}
+.cta__icon svg {
+  width: 22px;
+  fill: none;
+  stroke: var(--cream);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.45s;
+}
+.cta__label { display: inline-block; transition: color 0.45s; }
+
+.cta:hover .cta__fill,
+.cta:focus-visible .cta__fill { transform: scaleX(1); }
+.cta:hover .cta__label,
+.cta:focus-visible .cta__label { color: var(--cream); }
+.cta:hover .cta__icon,
+.cta:focus-visible .cta__icon { background: var(--cream); }
+.cta:hover .cta__icon svg,
+.cta:focus-visible .cta__icon svg { stroke: var(--ink); }
+.cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+/* exit wipe into the menu */
+.wipe {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+  font-family: var(--hand);
+  font-size: 44px;
+  clip-path: circle(0px at 50% 100%);
+  pointer-events: none;
+  z-index: 10;
+}

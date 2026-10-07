@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "wok-and-flame",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-c", "import os, http.server as s; s.test(HandlerClass=s.SimpleHTTPRequestHandler, port=int(os.environ.get('PORT', '5173')))"],
+      "port": 5173,
+      "autoPort": true
+    },
+    {
+      "name": "wok-and-flame-py",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-c", "import os, http.server as s; s.test(HandlerClass=s.SimpleHTTPRequestHandler, port=int(os.environ.get('PORT', '5174')))"],
+      "port": 5174,
+      "autoPort": true
+    }
+  ]
+}

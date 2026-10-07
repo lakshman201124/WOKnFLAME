@@ -1,0 +1,18 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "splash/index.html",
+          "menu/index.html"
+        ],
+        "createdAt": "2026-10-06T18:07:03.366Z",
+        "reason": "user requested: brief says 'use cream for the background and blue for the line outliner'"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+# local tooling state
+.impeccable/hook.cache.json
+.impeccable/build/
+.impeccable/review/
+.impeccable/mocks/
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+node_modules/
